@@ -69,3 +69,15 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 ```bash
 uvicorn app.main:app --reload
 ```
+
+
+| File                 | Description                                                                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **main.py**          | Entry point of FastAPI app. Defines routes for auth and includes Stripe payment router. Also handles JWT dependency for protected endpoints. |
+| **auth.py**          | Handles JWT token creation, verification, password hashing, and password verification using `passlib`.                                       |
+| **models.py**        | SQLAlchemy models for database tables. Includes `User` table (can add `Payment` table later).                                                |
+| **schemas.py**       | Pydantic models for request validation and response serialization (e.g., UserCreate, UserLogin, PaymentRequest).                             |
+| **database.py**      | Database configuration using SQLAlchemy (engine, session, Base). Handles DB connections.                                                     |
+| **payments.py**      | Contains Stripe integration logic and payment-related endpoints. Defines `/create-payment-intent/` and other payment APIs.                   |
+| **requirements.txt** | Lists all Python dependencies needed to run the project.                                                                                     |
+| **.env**             | Environment variables (JWT secret, Stripe API key, database URL) to keep sensitive info out of code.                                         |
