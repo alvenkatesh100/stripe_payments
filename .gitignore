@@ -1,0 +1,30 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# SQLite database file
+*.db
+
+# MySQL or other local configs (if any)
+*.env
+.env
+
+# Logs
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Stripe API keys or sensitive files (if added separately)
+stripe_keys.json
